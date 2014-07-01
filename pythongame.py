@@ -1,3 +1,10 @@
+# A work in progress
+# A text adventure game to get to grips with bits of Python
+# If I had the commitment I'd make this the scale of Myst
+# but with more cyber-punk overtones.
+# If anyone ever finds this, please make the text green
+# so it looks like an 80s terminal.
+
 import time, sys
 
 def dead(why):
@@ -17,7 +24,7 @@ def start():
 	elif "desk" in next:
 		desk()
 	else:
-		dead("error!")
+		dead("error!") # this will be updated to be more meaningful
 
 def computer():
 	print "The screen lights up.\n\n"
@@ -25,6 +32,8 @@ def computer():
 
 	tries = 1
 
+	# Kind of proud of this. Keeps a track of unsuccessful logins,
+	# then boots you out of the game if you get it wrong too many times.
 	while tries <= 5:
 
 		triesremaining = 5 - tries
@@ -41,7 +50,8 @@ def computer():
 			dead("\nYou failed to enter the correct password. The system is locked.")
 		else:
 			pass
-
+	# The 'break' in the while loop above leads to here.
+	# There's probably a better way to do it.		
 	firstscreen()	
 
 def firstscreen():
@@ -70,13 +80,14 @@ def firstscreen():
 		else:
 			print "Please enter a valid file number."
 
-def accounts():
+def accounts(): # temporary
 	print "Acc"
 
-def july_13():
+def july_13(): # temporary
 	print "July"
 
-def explode():
+def explode(): # temporary
 	print "Expl"
 
+# Game begins - should be 'start() but for testing I change this to suit'
 computer()
