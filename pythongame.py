@@ -56,7 +56,24 @@ def computer():
 
 def firstscreen():
 	print "Login successful..."
-	print "\nWelcome to the mainframe."		
+	print "\nWelcome to the mainframe."
+	print "\nAccess your mail or browse files?"
+
+	while True:
+
+		next = raw_input("Mail or Files?")
+
+		if "mail" in next: # need to break out of this loop
+			mail()
+		elif "files" in next: # need to break out of this loop
+			files()
+		else:
+			print "Please enter a valid command"
+
+def mail():
+	print "\nFetching messages.\n"
+	
+def files():
 	print "\nGathering list of files.\n"
 
 	print """ 
